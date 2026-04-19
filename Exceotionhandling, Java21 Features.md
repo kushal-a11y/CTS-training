@@ -85,13 +85,13 @@ The `finally` block is guaranteed to execute regardless of whether an exception 
 * Used for cleanup (closing file, DB)
 
 **💻 Finally  in Code**  
-    `try {`  
-        `int a = 10 / 2;`  
-    `} catch (Exception e) {`  
-        `System.out.println("Error");`  
-    `} finally {`  
-        `System.out.println("Cleanup done");`  
-    `}`
+    `try {  
+        int a = 10 / 2;  
+    } catch (Exception e) {  
+        System.out.println("Error"); 
+    } finally {  
+        System.out.println("Cleanup done");  
+    }`
 
 ## 
 
@@ -112,10 +112,10 @@ The `finally` block is guaranteed to execute regardless of whether an exception 
 The `throw` keyword is used **inside a method** to explicitly create and instantiate a single exception object (`throw new ExceptionType(...)`) and transfer control to the nearest surrounding `try-catch` block or, if none exists, propagate it up the call stack. It is used to signal a specific error condition based on custom logic.
 
 **💻 Code**  
-    `int age = 15;`  
-    `if (age < 18) {`  
-        `throw new IllegalArgumentException("Not eligible");`  
-    `}`
+    `int age = 15;  
+    if (age < 18) {  
+        throw new IllegalArgumentException("Not eligible");  
+    }`
 
 **🚀 6\. throws (Declaring exception)**
 
@@ -124,10 +124,10 @@ The `throw` keyword is used **inside a method** to explicitly create and instant
 The `throws` keyword is used in a method’s signature to **declare** that the method *might* throw one or more **checked exceptions**. This forces the calling method to either handle that exception using `try-catch` or re-declare it using `throws` to propagate it further up the call stack. This mechanism enforces the Java compiler's "handle or declare" rule for checked exceptions.
 
 **💻 Code**  
-    `import java.io.*;`  
-    `void readFile() throws IOException {`  
-        `throw new IOException("File error");`  
-    `}`
+    `import java.io.*;
+    void readFile() throws IOException {  
+        throw new IOException("File error");  
+    }`
 
 ---
 
